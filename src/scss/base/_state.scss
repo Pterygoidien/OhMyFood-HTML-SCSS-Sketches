@@ -1,0 +1,17 @@
+%visibility-hidden {
+  visibility: hidden;
+}
+%display-none {
+  display: none;
+}
+
+.invisible {
+  @extend %visibility-hidden;
+}
+.hidden {
+  @extend %display-none;
+}
+
+.is-visible {
+  display: block;
+}
