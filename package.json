@@ -1,0 +1,15 @@
+{
+  "name": "Ohmyfood",
+  "version": "1.0.0",
+  "description": "A HTML/CSS prototype for \"Ohmyfood\" webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/scss/main.scss:./dist/css/style.css",
+    "sass-prod": "sass --watch ./src/scss/main.scss:./dist/css/style.minified.css --style compressed",
+    "prefix": "postcss ./dist/css/style.minified.css --use autoprefixer -d ./dist/css/prefixed/"
+  },
+  "author": "Bertrand Bouillon",
+  "license": "MIT",
+  "browserslist": "last 4 versions"
+}
