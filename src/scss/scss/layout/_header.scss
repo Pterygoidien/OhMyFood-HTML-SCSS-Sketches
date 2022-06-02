@@ -1,0 +1,16 @@
+$arrowSize: 24px;
+.main-header {
+  @include flex(row);
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 15px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.header__left,
+.header__right {
+  width: $arrowSize;
+  //visibility: hidden;
+}
+.fa-arrow-left {
+  font-size: $arrowSize;
+}

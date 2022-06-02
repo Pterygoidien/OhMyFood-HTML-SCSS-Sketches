@@ -1,0 +1,53 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Shrikhand&display=swap");
+
+///Ce dossier scss tente de respecter l'architecture 7:1 - 7 dossiers, centralisés sur un fichier principal (main.scss).
+/// @structure :
+///     scss/
+///     |
+///     |- abstracts/
+///     |   |- _variables.scss          # Sass Variables
+///     |   |- _functions.scss          # Sass Functions
+///     |   |- _mixins.scss             # Sass Mixins
+///     |   |- _placeholders.scss       # Sass Placeholders
+///     |
+///     |- base/
+///     |   |- _reset.scss              # Reset/normalize css
+///     |   |- _base.scss               # Multiple unitary classes
+///     |   |- _typography.scss         # Typography rules
+///     |-  |- _state.scss              # Contains particular states of objects (visibile, hidden, etc.)
+///     |
+///     |- components/
+///     |   |- _buttons.scss            # Buttons
+///     |   | -_card.scss               # Cards
+///     |
+///     |- layout/
+///     |   |- _header.scss              # Header & navigation
+///     |   | -_footer.scss              # Footer
+///     |
+///     |- pages/
+///     |   |- _home.scss                # Home (index.html) specific styles
+///     |   | -_restaurant.scss          # Restaurant page specific styles (restaurant-{n}.html)
+///     |
+///     |- main.scss                    # Main Sass file
+
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/state";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./components/buttons";
+@import "./components/card";
+@import "./components/icons";
+//@import "./pages/home";
+//@import "./pages/restaurant";
+
+//@import "./shame";

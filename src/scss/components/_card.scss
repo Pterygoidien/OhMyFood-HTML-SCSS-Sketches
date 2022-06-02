@@ -1,0 +1,35 @@
+.card {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  flex: 1 1 250px;
+
+  &__image {
+    height: 200px;
+    object-fit: cover;
+  }
+  &__infos {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      cursor: pointer;
+      font-size: 1.7rem;
+      transition-property: transform;
+
+      &:hover::before {
+        content: "\f004";
+
+        font: var(--fa-font-solid);
+        color: $primaryColor;
+        @include generate-gradient($primaryColor, $secondaryColor, 10deg);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 1s ease-in;
+        background-position: -5px;
+      }
+    }
+  }
+}

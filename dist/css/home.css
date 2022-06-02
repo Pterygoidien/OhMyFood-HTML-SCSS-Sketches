@@ -1,0 +1,84 @@
+/* Part 1 : Layout settings : Flex, Grid, etc. */
+section {
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+section .section__container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#location {
+  padding: 18px;
+  background-color: rgb(234, 234, 234);
+}
+
+#booking {
+  background-color: rgb(246, 246, 246);
+  align-items: center;
+  padding: 60px 70px;
+}
+
+#booking button {
+  background: linear-gradient(-10deg, #9356dc, #ff79da);
+  color: white;
+  border: none;
+}
+
+#fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  counter-reset: list;
+  list-style-type: none;
+  list-style-position: outside;
+}
+#fonctionnement ol li {
+  counter-increment: list;
+  position: relative;
+  margin-left: 15px;
+  padding: 25px;
+  border-radius: 15px;
+  padding-left: 35px;
+  vertical-align: center;
+  background: rgb(246, 246, 246);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#fonctionnement ol li:hover, #fonctionnement ol li:focus {
+  background: rgb(245, 237, 255);
+}
+#fonctionnement ol li:hover i, #fonctionnement ol li:focus i {
+  color: #9356dc;
+}
+#fonctionnement ol li i {
+  margin-right: 15px;
+}
+#fonctionnement ol li::before {
+  content: counter(list) " ";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  left: -10px;
+  top: 20px;
+  padding-top: 5px;
+  color: white;
+  background-color: #9356dc;
+}
+
+#restaurants {
+  background: rgb(246, 246, 246);
+}
+
+#restaurants .content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}/*# sourceMappingURL=home.css.map */

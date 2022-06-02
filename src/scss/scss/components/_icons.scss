@@ -1,0 +1,36 @@
+.heart-icon {
+  width: 32px;
+}
+.heart-icon path {
+  fill: transparent;
+  stroke-width: 3;
+  stroke: black;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 165;
+}
+.heart-icon:hover path {
+  animation: animate-heart 2s linear forwards;
+  stroke-dasharray: 165;
+}
+@keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 0;
+    fill: url(#heart--linear-gradient);
+    fill-opacity: 2%;
+  }
+  40% {
+    stroke-dashoffset: 165;
+    fill: url(#heart--linear-gradient);
+    fill-opacity: 40%;
+  }
+  80% {
+    stroke-dashoffset: 330;
+    fill: url(#heart--linear-gradient);
+    fill-opacity: 80%;
+  }
+  100% {
+    stroke-dashoffset: 330;
+    fill: url(#heart--linear-gradient);
+    stroke-width: 0;
+  }
+}

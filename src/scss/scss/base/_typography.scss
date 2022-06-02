@@ -1,0 +1,35 @@
+body,
+html {
+  font-family: $fontFamily__text;
+  font-size: $fontSize__default;
+}
+
+h1 {
+  font-family: $fontFamily__title;
+  line-height: 1rem;
+}
+h2 {
+  margin-bottom: 25px;
+}
+h3 {
+  font-weight: 600;
+}
+
+/*Typography-utilitary classes*/
+@each $key, $value in $fontSizes {
+  .text-#{$key} {
+    font-size: $value;
+    line-height: map-get($lineHeights, $key);
+  }
+}
+@each $key, $value in $fontWeights {
+  .font-#{$key} {
+    font-weight: $value;
+  }
+}
+.font-title {
+  font-family: $fontFamily__title;
+}
+.text-center {
+  text-align: center;
+}
