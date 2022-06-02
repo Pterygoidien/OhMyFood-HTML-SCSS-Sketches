@@ -1,0 +1,36 @@
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+$lightGray: rgba(246, 246, 246, 1);
+$darkGray: rgba(234, 234, 234, 1);
+
+$fontFamily__title: ("Shrikhand", cursive);
+$fontFamily__text: ("Roboto", sans-serif);
+$fontSize__default: 16px;
+
+$fontSizes: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "base": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+);
+
+$fontWeights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+);
+
+$lineHeights: (
+  "xs": 1rem,
+  "sm": 1.25rem,
+  "base": 1.25rem,
+  "lg": 1.75rem,
+  "xl": 1.75rem,
+);

@@ -1,0 +1,34 @@
+/* Part 1 : Layout settings : Flex, Grid, etc. */
+/// Générateur de display flex ayant recours à la propriété raccourcie "flex-flow"
+///
+/// @author Bertrand Bouillon
+///
+/// @access public
+///
+/// @type Display
+///
+/// @param {string} $flexLabel - label du type de display flex, disponible dans la liste suivante : "row", "row-wrap", "col", "col-wrap"
+/// @param {string} $flexLabel: void - default param (null) is 'row' (flex-flow : row nowrap)
+///
+/// @example scss - Utilisation
+///   .foo {  @include flex(col);  }
+///
+/// @example css - CSS après compilation
+///   .foo {  display:flex; flex-flow: column nowrap;  }
+/// end doc
+
+@mixin generate-gradient($color1: black, $color2: white, $degree: 0deg) {
+  //example of useless mixin : mixin receives as much parameters as the css rule it calls, and only return that one rule !
+  background: linear-gradient($degree, $color1, $color2);
+}
+
+$flexType: (
+  "row": row nowrap,
+  "row-wrap": row wrap,
+  "col": column nowrap,
+  "col-wrap": column wrap,
+);
+@mixin flex($flexLabel) {
+  display: flex;
+  flex-flow: map-get($flexType, $flexLabel);
+}
