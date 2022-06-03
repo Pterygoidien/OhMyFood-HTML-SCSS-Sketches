@@ -350,6 +350,7 @@ footer#main-footer h3 {
 .btn {
   border-radius: 30px;
   padding: 15px 25px;
+  color: white;
   cursor: pointer;
   font-weight: 600;
 }
