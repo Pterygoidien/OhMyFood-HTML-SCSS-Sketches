@@ -35,6 +35,7 @@ article {
   .article__title {
     text-transform: uppercase;
     position: relative;
+    text-overflow: ellipsis;
     font-weight: 400;
     margin: 20px 0;
     &::before {
@@ -57,37 +58,45 @@ article {
   justify-content: space-between;
   align-items: center;
   background: white;
-
+  width: 100%;
   border-radius: 15px;
-  overflow: hidden;
+  overflow: hidden !important;
   height: 80px;
   position: relative;
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 100%;
     padding: 10px 20px;
   }
+  &__desc {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   &__save {
+    display: flex;
     width: 100px;
     height: 100%;
+    margin-right: -100px;
     background-color: $tertiaryColor;
     justify-content: center;
     align-items: center;
-    display: none;
-
     i.fa-circle-check {
       font-size: 26px;
       color: white;
-      animation-name: rotate-icon;
-      animation-duration: 1s;
     }
   }
+
   &:hover &__save {
-    display: flex;
+    animation: slide-in 1.5s;
+    margin-right: 0px;
+    i.fa-circle-check {
+      animation-name: rotate-icon;
+      animation-duration: 2s;
+    }
   }
 }
 section button {
@@ -99,5 +108,13 @@ section button {
   }
   to {
     transform: rotate(-360deg);
+  }
+}
+@keyframes slide-in {
+  from {
+    margin-right: -100px;
+  }
+  to {
+    margin-right: 0;
   }
 }
