@@ -23,6 +23,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
   header {
     display: flex;
     align-items: center;
@@ -55,32 +58,40 @@ article {
 }
 .item {
   display: flex;
+  width: 100%;
+
+  border-radius: 15px;
   justify-content: space-between;
   align-items: center;
   background: white;
-  width: 100%;
-  border-radius: 15px;
   overflow: hidden !important;
   height: 80px;
-  position: relative;
+  animation: slide-up 1s ease-in-out;
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 10px 20px;
+    flex: 1;
+    overflow: hidden;
   }
   &__desc {
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    margin: 15px;
+    overflow-x: hidden;
+    h3,
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  &__price {
+    margin: 0 15px;
   }
   &__save {
     display: flex;
-    width: 100px;
+    width: 60px;
     height: 100%;
-    margin-right: -100px;
+    margin-right: -60px;
     background-color: $tertiaryColor;
     justify-content: center;
     align-items: center;
@@ -112,9 +123,19 @@ section button {
 }
 @keyframes slide-in {
   from {
-    margin-right: -100px;
+    margin-right: -60px;
   }
   to {
     margin-right: 0;
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
   }
 }
