@@ -30,7 +30,9 @@ h3 {
 }
 .font--title {
   font-family: $fontFamily__title;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.11rem;
+  font-weight: 500;
 }
 .text-center {
   text-align: center;
