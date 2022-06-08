@@ -14,5 +14,35 @@
     @include generate-gradient($primaryColor, $secondaryColor, -10deg);
     color: white;
     border: none;
+    z-index: 1;
+    position: relative;
+
+    &:hover::before {
+      content: "";
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      position: absolute;
+      z-index: -5;
+      top: -2px;
+      left: -2px;
+      border-radius: inherit;
+      @include generate-gradient($primaryColor, $secondaryColor, 45deg);
+      filter: blur(5px);
+      animation: slide-background 20s linear infinite;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+@keyframes slide-background {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
