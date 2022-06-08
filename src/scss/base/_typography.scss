@@ -13,11 +13,7 @@ h2 {
 }
 h3 {
   font-weight: 600;
-}
-
-.font--logo {
-  font-family: $fontFamily__title;
-  font-size: 1.8rem;
+  margin-top: 0px;
 }
 
 /*Typography-utilitary classes*/
@@ -32,8 +28,9 @@ h3 {
     font-weight: $value;
   }
 }
-.font-title {
+.font--title {
   font-family: $fontFamily__title;
+  font-size: 1.8rem;
 }
 .text-center {
   text-align: center;

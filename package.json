@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./src/scss/main.scss:./dist/css/style.css",
-    "sass-prod": "sass --watch ./src/scss/main.scss:./dist/css/style.minified.css --style compressed",
-    "prefix": "postcss ./dist/css/style.minified.css --use autoprefixer -d ./dist/css/prefixed/",
+    "sass-prod": "sass --watch ./src/scss/main.scss:./dist/css/minified/main.min.css --style compressed",
+    "prefix": "postcss ./dist/css/minified/main.min.css --use autoprefixer -d ./dist/css/prefixed/",
     "deploy": "gh-pages -d dist"
   },
   "author": "Bertrand Bouillon",
@@ -15,6 +15,7 @@
   "homepage": "https://Pterygoidien.github.io/OpenClassroom_Project3",
   "browserslist": "last 4 versions",
   "dependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "sass": "^1.52.2"
   }
 }

@@ -5,9 +5,19 @@
   overflow: hidden;
   flex: 1 1 250px;
 
-  &__image {
+  &-image__container {
     height: 200px;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
     object-fit: cover;
+    object-position: center;
+    transition: 0.8s ease-in-out;
+  }
+  &:hover &__image {
+    transform: scale(1.1) rotate(3deg);
   }
 
   &__infos {
