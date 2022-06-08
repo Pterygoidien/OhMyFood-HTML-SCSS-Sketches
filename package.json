@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./src/scss/main.scss:./dist/css/style.css",
+    "sass": "sass --watch ./src/scss/main.scss:./dist/css/main.css",
     "sass-prod": "sass --watch ./src/scss/main.scss:./dist/css/minified/main.min.css --style compressed",
     "prefix": "postcss ./dist/css/minified/main.min.css --use autoprefixer -d ./dist/css/prefixed/",
     "deploy": "gh-pages -d dist"
