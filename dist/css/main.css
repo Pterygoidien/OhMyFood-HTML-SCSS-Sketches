@@ -381,9 +381,11 @@ footer#main-footer li > i {
   top: -2px;
   left: -2px;
   border-radius: inherit;
-  background: linear-gradient(45deg, #9356dc, #ff79da);
+  background: linear-gradient(-20deg, #9356dc, #ff79da);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
   filter: blur(5px);
-  animation: slide-background 20s linear infinite;
+  animation: slide-background 2s linear infinite;
 }
 .btn:hover {
   transform: scale(1.05);
@@ -391,13 +393,13 @@ footer#main-footer li > i {
 
 @keyframes slide-background {
   0% {
-    background-position: 0 0;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 400% 0;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0 0;
+    background-position: 0% 50%;
   }
 }
 .card {
