@@ -3,6 +3,7 @@
   padding: 15px 25px;
   color: white;
   cursor: pointer;
+  position: relative;
   font-weight: 600;
   &--primary {
     @extend .bg--primary;
@@ -18,20 +19,35 @@
     z-index: 5;
     position: relative;
 
-    &:hover::before {
-      content: "";
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      position: absolute;
-      z-index: -100;
-      top: -2px;
-      left: -2px;
-      border-radius: inherit;
-      @include generate-gradient($primaryColor, $secondaryColor, -20deg);
-      background-size: 200% 200%;
-      background-position: 0% 0%;
-      filter: blur(5px);
-      animation: slide-background 10s linear infinite;
+    &:hover {
+      @include generate-gradient(
+        lighten($primaryColor, 8),
+        lighten($secondaryColor, 8),
+        -80deg
+      );
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+      &::before {
+        content: "";
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        position: absolute;
+        z-index: -100;
+        top: -2px;
+        left: -2px;
+        border-radius: inherit;
+        opacity: 40%;
+        @include generate-gradient(
+          darken($primaryColor, 2),
+          darken($secondaryColor, 2),
+          -20deg
+        );
+        background-size: 200%;
+        background-position: 0% 0%;
+        filter: blur(2px);
+        animation: slide-background 3s ease-in-out infinite;
+      }
     }
   }
   &:hover {
@@ -40,12 +56,21 @@
 }
 @keyframes slide-background {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 25%;
   }
   50% {
     background-position: 100% 50%;
   }
+  75% {
+    background-position: 50% 100%;
+  }
+  80% {
+    background-position: 25% 50%;
+  }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
