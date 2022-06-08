@@ -369,7 +369,7 @@ footer#main-footer li > i {
   background: linear-gradient(-10deg, #9356dc, #ff79da);
   color: white;
   border: none;
-  z-index: 1;
+  z-index: 5;
   position: relative;
 }
 .btn--linear:hover::before {
@@ -377,7 +377,7 @@ footer#main-footer li > i {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   position: absolute;
-  z-index: -5;
+  z-index: -100;
   top: -2px;
   left: -2px;
   border-radius: inherit;
