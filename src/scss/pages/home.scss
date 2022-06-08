@@ -22,11 +22,7 @@ section {
   align-items: center;
   padding: 60px 70px;
 }
-#booking button {
-  @include generate-gradient($primaryColor, $secondaryColor, -10deg);
-  color: white;
-  border: none;
-}
+
 #fonctionnement ol {
   display: flex;
   flex-direction: column;

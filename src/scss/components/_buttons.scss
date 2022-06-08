@@ -10,4 +10,9 @@
   &--secondary {
     @extend .bg--secondary;
   }
+  &--linear {
+    @include generate-gradient($primaryColor, $secondaryColor, -10deg);
+    color: white;
+    border: none;
+  }
 }

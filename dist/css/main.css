@@ -365,6 +365,12 @@ footer#main-footer li > i {
   cursor: pointer;
   font-weight: 600;
 }
+.btn--linear {
+  background: linear-gradient(-10deg, #9356dc, #ff79da);
+  color: white;
+  border: none;
+}
+
 .card {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 30px;
