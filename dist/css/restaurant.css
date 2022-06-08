@@ -20,6 +20,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
   z-index: 5;
   background: rgb(246, 246, 246);
 }
@@ -29,9 +32,16 @@
   justify-content: space-between;
 }
 
+article {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 article .article__title {
   text-transform: uppercase;
   position: relative;
+  text-overflow: ellipsis;
   font-weight: 400;
   margin: 20px 0;
 }
@@ -51,53 +61,44 @@ article .article__item-list {
 
 .item {
   display: flex;
+  width: 100%;
+  border-radius: 15px;
   justify-content: space-between;
   align-items: center;
   background: white;
-  border-radius: 15px;
-  overflow: hidden;
+  overflow: hidden !important;
   height: 80px;
-  position: relative;
+  animation: slide-up 1s ease-in-out;
 }
 .item__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
+  overflow: hidden;
+}
+.item__desc {
+  margin: 15px;
+  overflow-x: hidden;
+}
+.item__desc h3,
+.item__desc p {
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 100%;
-  padding: 10px 20px;
+  overflow: hidden;
+}
+.item__price {
+  margin: 0 15px;
 }
 .item__save {
-  width: 100px;
+  display: flex;
+  width: 60px;
   height: 100%;
+  margin-right: -60px;
   background-color: #99e2d0;
   justify-content: center;
   align-items: center;
-  display: none;
 }
-.item__save i.fa-circle-check {
-  font-size: 26px;
-  color: white;
-  animation-name: rotate-icon;
-  animation-duration: 1s;
-}
-.item:hover .item__save {
-  display: flex;
-}
-
-section button {
-  align-self: center;
-}
-
-@keyframes rotate-icon {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}/*# sourceMappingURL=restaurant.css.map */}
 .item__save i.fa-circle-check {
   font-size: 26px;
   color: white;
