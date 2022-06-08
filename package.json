@@ -12,7 +12,7 @@
   },
   "author": "Bertrand Bouillon",
   "license": "MIT",
-  "homepage": "https://pterygoidien.github.io/OpenClassroom_Project3",
+  "homepage": "https://Pterygoidien.github.io/OpenClassroom_Project3",
   "browserslist": "last 4 versions",
   "dependencies": {
     "gh-pages": "^4.0.0"
