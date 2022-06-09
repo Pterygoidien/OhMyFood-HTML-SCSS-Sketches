@@ -56,8 +56,7 @@ a {
 a:focus {
   outline: thin dotted;
 }
-a:hover,
-a:active {
+a:hover, a:active {
   outline: 0;
 }
 
@@ -127,8 +126,7 @@ q {
   quotes: "“" "”" "‘" "’";
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -198,9 +196,9 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -226,18 +224,16 @@ table {
   border-spacing: 0;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox], input[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -278,13 +274,11 @@ ul li {
   margin-left: 1rem;
 }
 
-.bg--primary,
-.btn--primary {
+.bg--primary, .btn--primary {
   background-color: #9356dc;
 }
 
-.bg--secondary,
-.btn--secondary {
+.bg--secondary, .btn--secondary {
   background-color: #ff79da;
 }
 
@@ -455,8 +449,7 @@ footer#main-footer li > i {
 }
 .btn--linear:hover {
   background: linear-gradient(-80deg, #a978e3, #ffa2e5);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn--linear:hover::before {
   content: "";
@@ -499,8 +492,7 @@ footer#main-footer li > i {
   }
 }
 .card {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 30px;
   overflow: hidden;
   flex: 1 1 250px;
@@ -561,23 +553,22 @@ footer#main-footer li > i {
   0% {
     stroke-dashoffset: 0;
     fill: url(#heart--linear-gradient);
-    fill-opacity: 0.02;
+    fill-opacity: 2%;
   }
   40% {
     stroke-dashoffset: 165;
     fill: url(#heart--linear-gradient);
-    fill-opacity: 0.4;
+    fill-opacity: 40%;
   }
   80% {
     stroke-dashoffset: 330;
     fill: url(#heart--linear-gradient);
-    fill-opacity: 0.8;
+    fill-opacity: 80%;
   }
   100% {
     stroke-dashoffset: 330;
     fill: url(#heart--linear-gradient);
     stroke-width: 0;
-    fill-opacity: 1;
   }
 }
 #loader {
@@ -592,7 +583,7 @@ footer#main-footer li > i {
   animation: loading-page 1.5s ease-in-out;
 }
 
-.lds-ellipsis {
+.loader-animation {
   display: inline-block;
   position: absolute;
   width: 80px;
@@ -601,7 +592,7 @@ footer#main-footer li > i {
   left: calc(50% - 30px);
 }
 
-.lds-ellipsis div {
+.loader-animation div {
   position: absolute;
   top: 33px;
   width: 13px;
@@ -611,27 +602,27 @@ footer#main-footer li > i {
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
-.lds-ellipsis div:nth-child(1) {
+.loader-animation div:nth-child(1) {
   left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
+  animation: loader-animation1 0.6s infinite;
 }
 
-.lds-ellipsis div:nth-child(2) {
+.loader-animation div:nth-child(2) {
   left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
+  animation: loader-animation2 0.6s infinite;
 }
 
-.lds-ellipsis div:nth-child(3) {
+.loader-animation div:nth-child(3) {
   left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
+  animation: loader-animation2 0.6s infinite;
 }
 
-.lds-ellipsis div:nth-child(4) {
+.loader-animation div:nth-child(4) {
   left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
+  animation: loader-animation3 0.6s infinite;
 }
 
-@keyframes lds-ellipsis1 {
+@keyframes loader-animation1 {
   0% {
     transform: scale(0);
   }
@@ -639,7 +630,7 @@ footer#main-footer li > i {
     transform: scale(1);
   }
 }
-@keyframes lds-ellipsis3 {
+@keyframes loader-animation3 {
   0% {
     transform: scale(1);
   }
@@ -647,7 +638,7 @@ footer#main-footer li > i {
     transform: scale(0);
   }
 }
-@keyframes lds-ellipsis2 {
+@keyframes loader-animation2 {
   0% {
     transform: translate(0, 0);
   }
